@@ -5,6 +5,10 @@ import AddProjectButton from "./AddProjectButton";
 const Modal = forwardRef(function Modal({ children }, ref) {
   const dialogRef = useRef();
 
+  function dismissThisDialog() {
+    return;
+  }
+
   useImperativeHandle(ref, () => {
     return {
       open() {
